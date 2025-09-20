@@ -1,0 +1,169 @@
+
+**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "wave1..cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 10ns 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source EXP1
+X_U1         0 N00213 VCC VDD VO uA741
+V_V1         N01069 0  AC 1
++SIN 0 0.5 10k 0 0 0
+R_R1         N00206 N00213  10k TC=0,0 
+V_V2         VDD 0 -12Vdc
+V_V3         VCC 0 12Vdc
+R_Rf         N00213 VO  200k TC=0,0 
+V_V4         N00206 N01069 0.2Vdc
+
+**** RESUMING wave1..cir ****
+.END
+
+**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         
+          IS  800.000000E-18 
+          RS    1            
+
+
+**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VO)   -3.9832  (  VCC)   12.0000  (  VDD)  -12.0000  (N00206)     .2000     
+
+(N00213) 39.26E-06 (N01069)    0.0000 (X_U1.6) 376.5E-06 (X_U1.7)   -3.9842     
+
+(X_U1.8)   -3.9842 (X_U1.9)    0.0000 (X_U1.10)    -.6077                       
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)    -.0199                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.000E-05
+    V_V2         1.337E-03
+    V_V3        -1.337E-03
+    V_V4        -2.000E-05
+    X_U1.vb      3.765E-09
+    X_U1.vc      1.498E-11
+    X_U1.ve      7.018E-12
+    X_U1.vlim   -1.992E-05
+    X_U1.vlp    -4.002E-11
+    X_U1.vln    -3.998E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        3.94
+
