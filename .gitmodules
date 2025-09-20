@@ -1,0 +1,3 @@
+[submodule "RISC-V-Project"]
+	path = RISC-V-Project
+	url = git@github.com:Rissun5779/RISC-V-Project.git
