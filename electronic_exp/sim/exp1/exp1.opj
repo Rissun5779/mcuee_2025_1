@@ -58,7 +58,15 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1.dsn")
+      (Path "Design Resources"
+         "C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -72,6 +80,8 @@
         (Scroll "0 0")
         (Zoom "200")
         (Occurrence "/"))
-      (Path "C:\USERS\ADMINISTRATOR\DESKTOP\EXP\EXP1\EXP1.DSN")
+      (Path
+         "C:\USERS\ADMINISTRATOR\DESKTOP\MCUEE_2025_1\ELECTRONIC_EXP\SIM\EXP1\EXP1.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+      (Page "PAGE1")))
+  (MPSSessionName "Administrator"))

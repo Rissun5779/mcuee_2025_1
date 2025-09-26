@@ -1,7 +1,7 @@
 
-**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 09/25/25 22:00:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1-pspicefiles\schematic1\w
 
 
  ****     CIRCUIT DESCRIPTION
@@ -32,20 +32,19 @@
 **** INCLUDING SCHEMATIC1.net ****
 * source EXP1
 X_U1         0 N00213 VCC VDD VO uA741
-V_V1         N01069 0  AC 1
+V_V1         N00206 0  AC 0
 +SIN 0 0.5 10k 0 0 0
-R_R1         N00206 N00213  10k TC=0,0 
+R_R1         N00206 N00213  3k TC=0,0 
 V_V2         VDD 0 -12Vdc
 V_V3         VCC 0 12Vdc
-R_Rf         N00213 VO  200k TC=0,0 
-V_V4         N00206 N01069 0.2Vdc
+R_Rf         N00213 VO  150k TC=0,0 
 
 **** RESUMING wave1..cir ****
 .END
 
-**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 09/25/25 22:00:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1-pspicefiles\schematic1\w
 
 
  ****     Diode MODEL PARAMETERS
@@ -61,9 +60,9 @@ V_V4         N00206 N01069 0.2Vdc
           RS    1            
 
 
-**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 09/25/25 22:00:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1-pspicefiles\schematic1\w
 
 
  ****     BJT MODEL PARAMETERS
@@ -99,9 +98,9 @@ V_V4         N00206 N01069 0.2Vdc
            D     .87         
 
 
-**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 09/25/25 22:00:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1-pspicefiles\schematic1\w
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -114,21 +113,21 @@ V_V4         N00206 N01069 0.2Vdc
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(   VO)   -3.9832  (  VCC)   12.0000  (  VDD)  -12.0000  (N00206)     .2000     
+(   VO)     .0129  (  VCC)   12.0000  (  VDD)  -12.0000  (N00206)    0.0000     
 
-(N00213) 39.26E-06 (N01069)    0.0000 (X_U1.6) 376.5E-06 (X_U1.7)   -3.9842     
+(N00213) 19.19E-06 (X_U1.6)-1.224E-06 (X_U1.7)     .0129 (X_U1.8)     .0129     
 
-(X_U1.8)   -3.9842 (X_U1.9)    0.0000 (X_U1.10)    -.6077                       
+(X_U1.9)    0.0000 (X_U1.10)    -.6077                   (X_U1.11)   11.9600    
 
-(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+(X_U1.12)   11.9600                   (X_U1.13)    -.5938                       
 
-(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+(X_U1.14)    -.5938                   (X_U1.53)   11.0000                       
 
-(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+(X_U1.54)  -11.0000                   (X_U1.90) 86.16E-06                       
 
-(X_U1.90)    -.0199                   (X_U1.91)   40.0000                       
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
 
-(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+(X_U1.99)    0.0000                   
 
 
 
@@ -136,16 +135,15 @@ V_V4         N00206 N01069 0.2Vdc
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -2.000E-05
+    V_V1         6.395E-09
     V_V2         1.337E-03
     V_V3        -1.337E-03
-    V_V4        -2.000E-05
-    X_U1.vb      3.765E-09
-    X_U1.vc      1.498E-11
-    X_U1.ve      7.018E-12
-    X_U1.vlim   -1.992E-05
-    X_U1.vlp    -4.002E-11
-    X_U1.vln    -3.998E-11
+    X_U1.vb     -1.224E-11
+    X_U1.vc      1.099E-11
+    X_U1.ve      1.101E-11
+    X_U1.vlim    8.616E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
 
     TOTAL POWER DISSIPATION   3.21E-02  WATTS
 
@@ -153,9 +151,9 @@ V_V4         N00206 N01069 0.2Vdc
 
           JOB CONCLUDED
 
-**** 09/20/25 12:12:48 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 09/25/25 22:00:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\exp\exp1\exp1-PSpiceFiles\SCHEMATIC1\wave1..sim ] 
+ ** Profile: "SCHEMATIC1-wave1."  [ C:\Users\Administrator\Desktop\mcuee_2025_1\electronic_exp\sim\exp1\exp1-pspicefiles\schematic1\w
 
 
  ****     JOB STATISTICS SUMMARY
@@ -165,5 +163,5 @@ V_V4         N00206 N01069 0.2Vdc
 
 
 
-  Total job time (using Solver 1)   =        3.94
+  Total job time (using Solver 1)   =        3.92
 
