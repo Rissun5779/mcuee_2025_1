@@ -1,0 +1,11 @@
+* source EXP1
+X_U1         N00092 N00213 VCC VDD VO uA741
+R_R1         VA N00213  20k TC=0,0 
+V_V2         VDD 0 -10Vdc
+V_V3         VCC 0 10Vdc
+R_Rf         N00213 VO  100k TC=0,0 
+R_R8         0 N00092  100k TC=0,0 
+R_R9         N00092 VB  20k TC=0,0 
+V_V4         VA 0  AC 1
++SIN 0 0.5 5k 0 0 0
+V_V5         VB 0 0.5Vdc

@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at fpu.sv(14): object "FADD_START" differs only in case from object "fadd_start" in the same scope File: C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu.sv Line: 14

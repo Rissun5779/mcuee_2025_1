@@ -1,0 +1,732 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do test_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test {C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:35:33 on Oct 06,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test" C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu.sv 
+# -- Compiling module fpu
+# 
+# Top level modules:
+# 	fpu
+# End time: 17:35:33 on Oct 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test {C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fadd_s.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:35:33 on Oct 06,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test" C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fadd_s.sv 
+# -- Compiling module fadd_s
+# 
+# Top level modules:
+# 	fadd_s
+# End time: 17:35:34 on Oct 06,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test {C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:35:34 on Oct 06,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test" C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv 
+# -- Compiling module fpu_tb
+# 
+# Top level modules:
+# 	fpu_tb
+# End time: 17:35:34 on Oct 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fpu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" fpu_tb 
+# Start time: 17:35:34 on Oct 06,2025
+# Loading sv_std.std
+# Loading work.fpu_tb
+# Loading work.fpu
+# Loading work.fadd_s
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: (vsim-7) Failed to open VCD file "build/fpu_tb.vcd" in write mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv(266)
+#    Time: 0 ps  Iteration: 0  Instance: /fpu_tb
+# === FPU Testbench Started ===
+# 
+# ========== FLW INSTRUCTION TESTS ==========
+# 
+# === Testing FLW:         Load 1.0 ===
+# Time:                   35 | State -> FLW_ACCESS
+# Time:                   45 | State -> FLW_WAIT_READY
+# Time:                   65 | State -> FLW_WAIT_DATA
+# Time:                   75 | State -> FLW_STABILIZE
+# Time:                   85 | State -> FLW_SAMPLE
+# Time:                   95 | State -> FLW_COMPLETE
+# Time:                  105 | State -> IDLE
+# Time:                  115 | ✓ Operation completed
+# Time:                  115 | Write-back: freg[ 1] = 0x3f800000
+# ✗ FAIL: Expected freg[ 1] = 0x3f800000, Got freg[ 1] = 0x3f800000
+# 
+# === Testing FLW:         Load 2.0 ===
+# Time:                  205 | State -> FLW_ACCESS
+# Time:                  215 | State -> FLW_WAIT_READY
+# Time:                  235 | State -> FLW_WAIT_DATA
+# Time:                  245 | State -> FLW_STABILIZE
+# Time:                  255 | State -> FLW_SAMPLE
+# Time:                  265 | State -> FLW_COMPLETE
+# Time:                  275 | State -> IDLE
+# Time:                  285 | ✓ Operation completed
+# Time:                  285 | Write-back: freg[ 2] = 0x40000000
+# ✗ FAIL: Expected freg[ 2] = 0x40000000, Got freg[ 2] = 0x40000000
+# 
+# === Testing FLW:         Load 3.0 ===
+# Time:                  375 | State -> FLW_ACCESS
+# Time:                  385 | State -> FLW_WAIT_READY
+# Time:                  405 | State -> FLW_WAIT_DATA
+# Time:                  415 | State -> FLW_STABILIZE
+# Time:                  425 | State -> FLW_SAMPLE
+# Time:                  435 | State -> FLW_COMPLETE
+# Time:                  445 | State -> IDLE
+# Time:                  455 | ✓ Operation completed
+# Time:                  455 | Write-back: freg[ 3] = 0x40400000
+# ✗ FAIL: Expected freg[ 3] = 0x40400000, Got freg[ 3] = 0x40400000
+# 
+# === Testing FLW:         Load 0.5 ===
+# Time:                  545 | State -> FLW_ACCESS
+# Time:                  555 | State -> FLW_WAIT_READY
+# Time:                  575 | State -> FLW_WAIT_DATA
+# Time:                  585 | State -> FLW_STABILIZE
+# Time:                  595 | State -> FLW_SAMPLE
+# Time:                  605 | State -> FLW_COMPLETE
+# Time:                  615 | State -> IDLE
+# Time:                  625 | ✓ Operation completed
+# Time:                  625 | Write-back: freg[ 4] = 0x3f000000
+# ✗ FAIL: Expected freg[ 4] = 0x3f000000, Got freg[ 4] = 0x3f000000
+# 
+# === Testing FLW:        Load 0.25 ===
+# Time:                  715 | State -> FLW_ACCESS
+# Time:                  725 | State -> FLW_WAIT_READY
+# Time:                  745 | State -> FLW_WAIT_DATA
+# Time:                  755 | State -> FLW_STABILIZE
+# Time:                  765 | State -> FLW_SAMPLE
+# Time:                  775 | State -> FLW_COMPLETE
+# Time:                  785 | State -> IDLE
+# Time:                  795 | ✓ Operation completed
+# Time:                  795 | Write-back: freg[ 5] = 0x3e800000
+# ✗ FAIL: Expected freg[ 5] = 0x3e800000, Got freg[ 5] = 0x3e800000
+# 
+# === Testing FLW:        Load -1.0 ===
+# Time:                  885 | State -> FLW_ACCESS
+# Time:                  895 | State -> FLW_WAIT_READY
+# Time:                  915 | State -> FLW_WAIT_DATA
+# Time:                  925 | State -> FLW_STABILIZE
+# Time:                  935 | State -> FLW_SAMPLE
+# Time:                  945 | State -> FLW_COMPLETE
+# Time:                  955 | State -> IDLE
+# Time:                  965 | ✓ Operation completed
+# Time:                  965 | Write-back: freg[ 6] = 0xbf800000
+# ✗ FAIL: Expected freg[ 6] = 0xbf800000, Got freg[ 6] = 0xbf800000
+# 
+# === Testing FLW:        Load -2.0 ===
+# Time:                 1055 | State -> FLW_ACCESS
+# Time:                 1065 | State -> FLW_WAIT_READY
+# Time:                 1085 | State -> FLW_WAIT_DATA
+# Time:                 1095 | State -> FLW_STABILIZE
+# Time:                 1105 | State -> FLW_SAMPLE
+# Time:                 1115 | State -> FLW_COMPLETE
+# Time:                 1125 | State -> IDLE
+# Time:                 1135 | ✓ Operation completed
+# Time:                 1135 | Write-back: freg[ 7] = 0xc0000000
+# ✗ FAIL: Expected freg[ 7] = 0xc0000000, Got freg[ 7] = 0xc0000000
+# 
+# === Testing FLW:        Load +0.0 ===
+# Time:                 1225 | State -> FLW_ACCESS
+# Time:                 1235 | State -> FLW_WAIT_READY
+# Time:                 1255 | State -> FLW_WAIT_DATA
+# Time:                 1265 | State -> FLW_STABILIZE
+# Time:                 1275 | State -> FLW_SAMPLE
+# Time:                 1285 | State -> FLW_COMPLETE
+# Time:                 1295 | State -> IDLE
+# Time:                 1305 | ✓ Operation completed
+# Time:                 1305 | Write-back: freg[ 8] = 0x00000000
+# ✗ FAIL: Expected freg[ 8] = 0x00000000, Got freg[ 8] = 0x00000000
+# 
+# === Testing FLW:        Load -0.0 ===
+# Time:                 1395 | State -> FLW_ACCESS
+# Time:                 1405 | State -> FLW_WAIT_READY
+# Time:                 1425 | State -> FLW_WAIT_DATA
+# Time:                 1435 | State -> FLW_STABILIZE
+# Time:                 1445 | State -> FLW_SAMPLE
+# Time:                 1455 | State -> FLW_COMPLETE
+# Time:                 1465 | State -> IDLE
+# Time:                 1475 | ✓ Operation completed
+# Time:                 1475 | Write-back: freg[ 9] = 0x80000000
+# ✗ FAIL: Expected freg[ 9] = 0x80000000, Got freg[ 9] = 0x80000000
+# 
+# === Testing FLW:   Load +Infinity ===
+# Time:                 1565 | State -> FLW_ACCESS
+# Time:                 1575 | State -> FLW_WAIT_READY
+# Time:                 1595 | State -> FLW_WAIT_DATA
+# Time:                 1605 | State -> FLW_STABILIZE
+# Time:                 1615 | State -> FLW_SAMPLE
+# Time:                 1625 | State -> FLW_COMPLETE
+# Time:                 1635 | State -> IDLE
+# Time:                 1645 | ✓ Operation completed
+# Time:                 1645 | Write-back: freg[10] = 0x7f800000
+# ✗ FAIL: Expected freg[10] = 0x7f800000, Got freg[10] = 0x7f800000
+# 
+# === Testing FLW:   Load -Infinity ===
+# Time:                 1735 | State -> FLW_ACCESS
+# Time:                 1745 | State -> FLW_WAIT_READY
+# Time:                 1765 | State -> FLW_WAIT_DATA
+# Time:                 1775 | State -> FLW_STABILIZE
+# Time:                 1785 | State -> FLW_SAMPLE
+# Time:                 1795 | State -> FLW_COMPLETE
+# Time:                 1805 | State -> IDLE
+# Time:                 1815 | ✓ Operation completed
+# Time:                 1815 | Write-back: freg[11] = 0xff800000
+# ✗ FAIL: Expected freg[11] = 0xff800000, Got freg[11] = 0xff800000
+# 
+# === Testing FLW:         Load NaN ===
+# Time:                 1905 | State -> FLW_ACCESS
+# Time:                 1915 | State -> FLW_WAIT_READY
+# Time:                 1935 | State -> FLW_WAIT_DATA
+# Time:                 1945 | State -> FLW_STABILIZE
+# Time:                 1955 | State -> FLW_SAMPLE
+# Time:                 1965 | State -> FLW_COMPLETE
+# Time:                 1975 | State -> IDLE
+# Time:                 1985 | ✓ Operation completed
+# Time:                 1985 | Write-back: freg[12] = 0x7fc00000
+# ✗ FAIL: Expected freg[12] = 0x7fc00000, Got freg[12] = 0x7fc00000
+# 
+# === Testing FLW: Min Denormalized ===
+# Time:                 2075 | State -> FLW_ACCESS
+# Time:                 2085 | State -> FLW_WAIT_READY
+# Time:                 2105 | State -> FLW_WAIT_DATA
+# Time:                 2115 | State -> FLW_STABILIZE
+# Time:                 2125 | State -> FLW_SAMPLE
+# Time:                 2135 | State -> FLW_COMPLETE
+# Time:                 2145 | State -> IDLE
+# Time:                 2155 | ✓ Operation completed
+# Time:                 2155 | Write-back: freg[13] = 0x00000001
+# ✗ FAIL: Expected freg[13] = 0x00000001, Got freg[13] = 0x00000001
+# 
+# === Testing FLW: Max Denormalized ===
+# Time:                 2245 | State -> FLW_ACCESS
+# Time:                 2255 | State -> FLW_WAIT_READY
+# Time:                 2275 | State -> FLW_WAIT_DATA
+# Time:                 2285 | State -> FLW_STABILIZE
+# Time:                 2295 | State -> FLW_SAMPLE
+# Time:                 2305 | State -> FLW_COMPLETE
+# Time:                 2315 | State -> IDLE
+# Time:                 2325 | ✓ Operation completed
+# Time:                 2325 | Write-back: freg[14] = 0x007fffff
+# ✗ FAIL: Expected freg[14] = 0x007fffff, Got freg[14] = 0x007fffff
+# 
+# === Testing FLW: d Max Normalized ===
+# Time:                 2415 | State -> FLW_ACCESS
+# Time:                 2425 | State -> FLW_WAIT_READY
+# Time:                 2445 | State -> FLW_WAIT_DATA
+# Time:                 2455 | State -> FLW_STABILIZE
+# Time:                 2465 | State -> FLW_SAMPLE
+# Time:                 2475 | State -> FLW_COMPLETE
+# Time:                 2485 | State -> IDLE
+# Time:                 2495 | ✓ Operation completed
+# Time:                 2495 | Write-back: freg[15] = 0x7f7fffff
+# ✗ FAIL: Expected freg[15] = 0x7f7fffff, Got freg[15] = 0x7f7fffff
+# 
+# ========== FSW INSTRUCTION TESTS ==========
+# 
+# === Testing FSW:        Store 1.0 ===
+# Time:                 2585 | State -> FSW_ACCESS
+# Time:                 2595 | State -> FSW_WAIT_READY
+# Time:                 2615 | State -> FSW_COMPLETE
+# Time:                 2625 | State -> IDLE
+# Time:                 2635 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002000] = 0x3f800000
+# 
+# === Testing FSW:        Store 2.0 ===
+# Time:                 2725 | State -> FSW_ACCESS
+# Time:                 2735 | State -> FSW_WAIT_READY
+# Time:                 2755 | State -> FSW_COMPLETE
+# Time:                 2765 | State -> IDLE
+# Time:                 2775 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002004] = 0x40000000
+# 
+# === Testing FSW:       Store -1.0 ===
+# Time:                 2865 | State -> FSW_ACCESS
+# Time:                 2875 | State -> FSW_WAIT_READY
+# Time:                 2895 | State -> FSW_COMPLETE
+# Time:                 2905 | State -> IDLE
+# Time:                 2915 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002008] = 0xbf800000
+# 
+# === Testing FSW:       Store +0.0 ===
+# Time:                 3005 | State -> FSW_ACCESS
+# Time:                 3015 | State -> FSW_WAIT_READY
+# Time:                 3035 | State -> FSW_COMPLETE
+# Time:                 3045 | State -> IDLE
+# Time:                 3055 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002010] = 0x00000000
+# 
+# === Testing FSW:       Store -0.0 ===
+# Time:                 3145 | State -> FSW_ACCESS
+# Time:                 3155 | State -> FSW_WAIT_READY
+# Time:                 3175 | State -> FSW_COMPLETE
+# Time:                 3185 | State -> IDLE
+# Time:                 3195 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002014] = 0x80000000
+# 
+# === Testing FSW:  Store +Infinity ===
+# Time:                 3285 | State -> FSW_ACCESS
+# Time:                 3295 | State -> FSW_WAIT_READY
+# Time:                 3315 | State -> FSW_COMPLETE
+# Time:                 3325 | State -> IDLE
+# Time:                 3335 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002018] = 0x7f800000
+# 
+# === Testing FSW:  Store -Infinity ===
+# Time:                 3425 | State -> FSW_ACCESS
+# Time:                 3435 | State -> FSW_WAIT_READY
+# Time:                 3455 | State -> FSW_COMPLETE
+# Time:                 3465 | State -> IDLE
+# Time:                 3475 | ✓ Operation completed
+# ✓ PASS: Memory[0x0000201c] = 0xff800000
+# 
+# === Testing FSW:        Store NaN ===
+# Time:                 3565 | State -> FSW_ACCESS
+# Time:                 3575 | State -> FSW_WAIT_READY
+# Time:                 3595 | State -> FSW_COMPLETE
+# Time:                 3605 | State -> IDLE
+# Time:                 3615 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002020] = 0x7fc00000
+# 
+# === Testing FSW:  Store Max Float ===
+# Time:                 3705 | State -> FSW_ACCESS
+# Time:                 3715 | State -> FSW_WAIT_READY
+# Time:                 3735 | State -> FSW_COMPLETE
+# Time:                 3745 | State -> IDLE
+# Time:                 3755 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002020] = 0x7f7fffff
+# 
+# === Testing FSW: Store Min Denorm ===
+# Time:                 3845 | State -> FSW_ACCESS
+# Time:                 3855 | State -> FSW_WAIT_READY
+# Time:                 3875 | State -> FSW_COMPLETE
+# Time:                 3885 | State -> IDLE
+# Time:                 3895 | ✓ Operation completed
+# ✓ PASS: Memory[0x00002024] = 0x00000001
+# 
+# ========== FADD INSTRUCTION TESTS ==========
+# 
+# === Testing FADD:  1.0 + 2.0 = 3.0 ===
+# FADD: 0x3f800000 + 0x40000000 -> freg[16]
+# Time:                 3985 | State -> FADD_START
+# Time:                 3995 | State -> FADD_WAIT
+# Time:                 4035 | State -> FADD_COMPLETE
+# Time:                 4045 | State -> IDLE
+# Time:                 4055 | ✓ Operation completed
+# Time:                 4055 | Write-back: freg[16] = 0x40400000
+# DEBUG: Comparing freg_wb_data=40400000 with expected=40400000, result=1
+# ✗ FAIL: Expected freg[16] = 0x40400000, Got freg[16] = 0x40400000
+# 
+# === Testing FADD:  2.0 + 3.0 = 5.0 ===
+# FADD: 0x40000000 + 0x40400000 -> freg[17]
+# Time:                 4145 | State -> FADD_START
+# Time:                 4155 | State -> FADD_WAIT
+# Time:                 4195 | State -> FADD_COMPLETE
+# Time:                 4205 | State -> IDLE
+# Time:                 4215 | ✓ Operation completed
+# Time:                 4215 | Write-back: freg[17] = 0x40a00000
+# DEBUG: Comparing freg_wb_data=40a00000 with expected=40a00000, result=1
+# ✗ FAIL: Expected freg[17] = 0x40a00000, Got freg[17] = 0x40a00000
+# 
+# === Testing FADD:  0.5 + 0.5 = 1.0 ===
+# FADD: 0x3f000000 + 0x3f000000 -> freg[18]
+# Time:                 4305 | State -> FADD_START
+# Time:                 4315 | State -> FADD_WAIT
+# Time:                 4355 | State -> FADD_COMPLETE
+# Time:                 4365 | State -> IDLE
+# Time:                 4375 | ✓ Operation completed
+# Time:                 4375 | Write-back: freg[18] = 0x3f800000
+# DEBUG: Comparing freg_wb_data=3f800000 with expected=3f800000, result=1
+# ✗ FAIL: Expected freg[18] = 0x3f800000, Got freg[18] = 0x3f800000
+# 
+# === Testing FADD: 0 + (-1.0) = 2.0 ===
+# FADD: 0x40400000 + 0xbf800000 -> freg[19]
+# Time:                 4465 | State -> FADD_START
+# Time:                 4475 | State -> FADD_WAIT
+# Time:                 4515 | State -> FADD_COMPLETE
+# Time:                 4525 | State -> IDLE
+# Time:                 4535 | ✓ Operation completed
+# Time:                 4535 | Write-back: freg[19] = 0x40000000
+# DEBUG: Comparing freg_wb_data=40000000 with expected=40000000, result=1
+# ✗ FAIL: Expected freg[19] = 0x40000000, Got freg[19] = 0x40000000
+# 
+# === Testing FADD: 0 + (-1.0) = 0.0 ===
+# FADD: 0x3f800000 + 0xbf800000 -> freg[20]
+# Time:                 4625 | State -> FADD_START
+# Time:                 4635 | State -> FADD_WAIT
+# Time:                 4675 | State -> FADD_COMPLETE
+# Time:                 4685 | State -> IDLE
+# Time:                 4695 | ✓ Operation completed
+# Time:                 4695 | Write-back: freg[20] = 0x32000000
+# DEBUG: Comparing freg_wb_data=32000000 with expected=00000000, result=0
+# ✗ FAIL: Expected freg[20] = 0x00000000, Got freg[20] = 0x32000000
+# 
+# === Testing FADD:  1.0 + 0.0 = 1.0 ===
+# FADD: 0x3f800000 + 0x00000000 -> freg[21]
+# Time:                 4785 | State -> FADD_START
+# Time:                 4795 | State -> FADD_WAIT
+# Time:                 4835 | State -> FADD_COMPLETE
+# Time:                 4845 | State -> IDLE
+# Time:                 4855 | ✓ Operation completed
+# Time:                 4855 | Write-back: freg[21] = 0x3f800000
+# DEBUG: Comparing freg_wb_data=3f800000 with expected=3f800000, result=1
+# ✗ FAIL: Expected freg[21] = 0x3f800000, Got freg[21] = 0x3f800000
+# 
+# === Testing FADD:  0.0 + 0.0 = 0.0 ===
+# FADD: 0x00000000 + 0x00000000 -> freg[22]
+# Time:                 4945 | State -> FADD_START
+# Time:                 4955 | State -> FADD_WAIT
+# Time:                 4995 | State -> FADD_COMPLETE
+# Time:                 5005 | State -> IDLE
+# Time:                 5015 | ✓ Operation completed
+# Time:                 5015 | Write-back: freg[22] = 0x00000000
+# DEBUG: Comparing freg_wb_data=00000000 with expected=00000000, result=1
+# ✗ FAIL: Expected freg[22] = 0x00000000, Got freg[22] = 0x00000000
+# 
+# === Testing FADD:  + (-0.0) = +0.0 ===
+# FADD: 0x00000000 + 0x80000000 -> freg[23]
+# Time:                 5105 | State -> FADD_START
+# Time:                 5115 | State -> FADD_WAIT
+# Time:                 5155 | State -> FADD_COMPLETE
+# Time:                 5165 | State -> IDLE
+# Time:                 5175 | ✓ Operation completed
+# Time:                 5175 | Write-back: freg[23] = 0x00000000
+# DEBUG: Comparing freg_wb_data=00000000 with expected=00000000, result=1
+# ✗ FAIL: Expected freg[23] = 0x00000000, Got freg[23] = 0x00000000
+# 
+# === Testing FADD: Inf + 1.0 = +Inf ===
+# FADD: 0x7f800000 + 0x3f800000 -> freg[24]
+# Time:                 5265 | State -> FADD_START
+# Time:                 5275 | State -> FADD_WAIT
+# Time:                 5315 | State -> FADD_COMPLETE
+# Time:                 5325 | State -> IDLE
+# Time:                 5335 | ✓ Operation completed
+# Time:                 5335 | Write-back: freg[24] = 0x7f800000
+# DEBUG: Comparing freg_wb_data=7f800000 with expected=7f800000, result=1
+# ✗ FAIL: Expected freg[24] = 0x7f800000, Got freg[24] = 0x7f800000
+# 
+# === Testing FADD: Inf + 1.0 = -Inf ===
+# FADD: 0xff800000 + 0x3f800000 -> freg[25]
+# Time:                 5425 | State -> FADD_START
+# Time:                 5435 | State -> FADD_WAIT
+# Time:                 5475 | State -> FADD_COMPLETE
+# Time:                 5485 | State -> IDLE
+# Time:                 5495 | ✓ Operation completed
+# Time:                 5495 | Write-back: freg[25] = 0xff800000
+# DEBUG: Comparing freg_wb_data=ff800000 with expected=ff800000, result=1
+# ✗ FAIL: Expected freg[25] = 0xff800000, Got freg[25] = 0xff800000
+# 
+# === Testing FADD: nf + +Inf = +Inf ===
+# FADD: 0x7f800000 + 0x7f800000 -> freg[26]
+# Time:                 5585 | State -> FADD_START
+# Time:                 5595 | State -> FADD_WAIT
+# Time:                 5635 | State -> FADD_COMPLETE
+# Time:                 5645 | State -> IDLE
+# Time:                 5655 | ✓ Operation completed
+# Time:                 5655 | Write-back: freg[26] = 0x7f800000
+# DEBUG: Comparing freg_wb_data=7f800000 with expected=7f800000, result=1
+# ✗ FAIL: Expected freg[26] = 0x7f800000, Got freg[26] = 0x7f800000
+# 
+# === Testing FADD: f + (-Inf) = NaN ===
+# FADD: 0x7f800000 + 0xff800000 -> freg[27]
+# Time:                 5745 | State -> FADD_START
+# Time:                 5755 | State -> FADD_WAIT
+# Time:                 5795 | State -> FADD_COMPLETE
+# Time:                 5805 | State -> IDLE
+# Time:                 5815 | ✓ Operation completed
+# Time:                 5815 | Write-back: freg[27] = 0xffc00000
+# DEBUG: Comparing freg_wb_data=ffc00000 with expected=7fc00000, result=0
+# ✗ FAIL: Expected freg[27] = 0x7fc00000, Got freg[27] = 0xffc00000
+# 
+# === Testing FADD:  NaN + 1.0 = NaN ===
+# FADD: 0x7fc00000 + 0x3f800000 -> freg[28]
+# Time:                 5905 | State -> FADD_START
+# Time:                 5915 | State -> FADD_WAIT
+# Time:                 5955 | State -> FADD_COMPLETE
+# Time:                 5965 | State -> IDLE
+# Time:                 5975 | ✓ Operation completed
+# Time:                 5975 | Write-back: freg[28] = 0x7fc00000
+# DEBUG: Comparing freg_wb_data=7fc00000 with expected=7fc00000, result=1
+# ✗ FAIL: Expected freg[28] = 0x7fc00000, Got freg[28] = 0x7fc00000
+# 
+# === Testing FADD:  1.0 + NaN = NaN ===
+# FADD: 0x3f800000 + 0x7fc00000 -> freg[29]
+# Time:                 6065 | State -> FADD_START
+# Time:                 6075 | State -> FADD_WAIT
+# Time:                 6115 | State -> FADD_COMPLETE
+# Time:                 6125 | State -> IDLE
+# Time:                 6135 | ✓ Operation completed
+# Time:                 6135 | Write-back: freg[29] = 0x7fc00000
+# DEBUG: Comparing freg_wb_data=7fc00000 with expected=7fc00000, result=1
+# ✗ FAIL: Expected freg[29] = 0x7fc00000, Got freg[29] = 0x7fc00000
+# 
+# === Testing FADD: orm + Min_Denorm ===
+# FADD: 0x00000001 + 0x00000001 -> freg[30]
+# Time:                 6225 | State -> FADD_START
+# Time:                 6235 | State -> FADD_WAIT
+# Time:                 6275 | State -> FADD_COMPLETE
+# Time:                 6285 | State -> IDLE
+# Time:                 6295 | ✓ Operation completed
+# Time:                 6295 | Write-back: freg[30] = 0x00000002
+# DEBUG: Comparing freg_wb_data=00000002 with expected=00000002, result=1
+# ✗ FAIL: Expected freg[30] = 0x00000002, Got freg[30] = 0x00000002
+# 
+# === Testing FADD:  Overflow to Inf ===
+# FADD: 0x7f000000 + 0x7f000000 -> freg[31]
+# Time:                 6385 | State -> FADD_START
+# Time:                 6395 | State -> FADD_WAIT
+# Time:                 6435 | State -> FADD_COMPLETE
+# Time:                 6445 | State -> IDLE
+# Time:                 6455 | ✓ Operation completed
+# Time:                 6455 | Write-back: freg[31] = 0x7f800000
+# DEBUG: Comparing freg_wb_data=7f800000 with expected=7f800000, result=1
+# ✗ FAIL: Expected freg[31] = 0x7f800000, Got freg[31] = 0x7f800000
+# 
+# ========== 混合操作測試 ==========
+# 
+# --- 序列 1: 載入兩個數，相加，儲存結果 ---
+# 
+# === Testing FLW:   Load 1.0 to f1 ===
+# Time:                 6545 | State -> FLW_ACCESS
+# Time:                 6555 | State -> FLW_WAIT_READY
+# Time:                 6575 | State -> FLW_WAIT_DATA
+# Time:                 6585 | State -> FLW_STABILIZE
+# Time:                 6595 | State -> FLW_SAMPLE
+# Time:                 6605 | State -> FLW_COMPLETE
+# Time:                 6615 | State -> IDLE
+# Time:                 6625 | ✓ Operation completed
+# Time:                 6625 | Write-back: freg[ 1] = 0x3f800000
+# ✗ FAIL: Expected freg[ 1] = 0x3f800000, Got freg[ 1] = 0x3f800000
+# 
+# === Testing FLW:   Load 2.0 to f2 ===
+# Time:                 6695 | State -> FLW_ACCESS
+# Time:                 6705 | State -> FLW_WAIT_READY
+# Time:                 6725 | State -> FLW_WAIT_DATA
+# Time:                 6735 | State -> FLW_STABILIZE
+# Time:                 6745 | State -> FLW_SAMPLE
+# Time:                 6755 | State -> FLW_COMPLETE
+# Time:                 6765 | State -> IDLE
+# Time:                 6775 | ✓ Operation completed
+# Time:                 6775 | Write-back: freg[ 2] = 0x40000000
+# ✗ FAIL: Expected freg[ 2] = 0x40000000, Got freg[ 2] = 0x40000000
+# 
+# === Testing FADD:    f1 + f2 = 3.0 ===
+# FADD: 0x3f800000 + 0x40000000 -> freg[ 3]
+# Time:                 6845 | State -> FADD_START
+# Time:                 6855 | State -> FADD_WAIT
+# Time:                 6895 | State -> FADD_COMPLETE
+# Time:                 6905 | State -> IDLE
+# Time:                 6915 | ✓ Operation completed
+# Time:                 6915 | Write-back: freg[ 3] = 0x40400000
+# DEBUG: Comparing freg_wb_data=40400000 with expected=40400000, result=1
+# ✗ FAIL: Expected freg[ 3] = 0x40400000, Got freg[ 3] = 0x40400000
+# 
+# === Testing FSW: Store result 3.0 ===
+# Time:                 6985 | State -> FSW_ACCESS
+# Time:                 6995 | State -> FSW_WAIT_READY
+# Time:                 7015 | State -> FSW_COMPLETE
+# Time:                 7025 | State -> IDLE
+# Time:                 7035 | ✓ Operation completed
+# ✓ PASS: Memory[0x00003000] = 0x40400000
+# 
+# --- 序列 2: 連續加法 ---
+# 
+# === Testing FADD:  1.0 + 1.0 = 2.0 ===
+# FADD: 0x3f800000 + 0x3f800000 -> freg[ 4]
+# Time:                 7125 | State -> FADD_START
+# Time:                 7135 | State -> FADD_WAIT
+# Time:                 7175 | State -> FADD_COMPLETE
+# Time:                 7185 | State -> IDLE
+# Time:                 7195 | ✓ Operation completed
+# Time:                 7195 | Write-back: freg[ 4] = 0x40000000
+# DEBUG: Comparing freg_wb_data=40000000 with expected=40000000, result=1
+# ✗ FAIL: Expected freg[ 4] = 0x40000000, Got freg[ 4] = 0x40000000
+# 
+# === Testing FADD:  2.0 + 1.0 = 3.0 ===
+# FADD: 0x40000000 + 0x3f800000 -> freg[ 5]
+# Time:                 7265 | State -> FADD_START
+# Time:                 7275 | State -> FADD_WAIT
+# Time:                 7315 | State -> FADD_COMPLETE
+# Time:                 7325 | State -> IDLE
+# Time:                 7335 | ✓ Operation completed
+# Time:                 7335 | Write-back: freg[ 5] = 0x40400000
+# DEBUG: Comparing freg_wb_data=40400000 with expected=40400000, result=1
+# ✗ FAIL: Expected freg[ 5] = 0x40400000, Got freg[ 5] = 0x40400000
+# 
+# === Testing FADD:  3.0 + 1.0 = 4.0 ===
+# FADD: 0x40400000 + 0x3f800000 -> freg[ 6]
+# Time:                 7405 | State -> FADD_START
+# Time:                 7415 | State -> FADD_WAIT
+# Time:                 7455 | State -> FADD_COMPLETE
+# Time:                 7465 | State -> IDLE
+# Time:                 7475 | ✓ Operation completed
+# Time:                 7475 | Write-back: freg[ 6] = 0x40800000
+# DEBUG: Comparing freg_wb_data=40800000 with expected=40800000, result=1
+# ✗ FAIL: Expected freg[ 6] = 0x40800000, Got freg[ 6] = 0x40800000
+# 
+# ========== 邊界和錯誤情況測試 ==========
+# 
+# === Testing FLW:       Load to f0 ===
+# Time:                 7565 | State -> FLW_ACCESS
+# Time:                 7575 | State -> FLW_WAIT_READY
+# Time:                 7595 | State -> FLW_WAIT_DATA
+# Time:                 7605 | State -> FLW_STABILIZE
+# Time:                 7615 | State -> FLW_SAMPLE
+# Time:                 7625 | State -> FLW_COMPLETE
+# Time:                 7635 | State -> IDLE
+# Time:                 7645 | ✓ Operation completed
+# Time:                 7645 | Write-back: freg[ 0] = 0x3f800000
+# ✗ FAIL: Expected freg[ 0] = 0x3f800000, Got freg[ 0] = 0x3f800000
+# 
+# === Testing FLW:      Load to f31 ===
+# Time:                 7715 | State -> FLW_ACCESS
+# Time:                 7725 | State -> FLW_WAIT_READY
+# Time:                 7745 | State -> FLW_WAIT_DATA
+# Time:                 7755 | State -> FLW_STABILIZE
+# Time:                 7765 | State -> FLW_SAMPLE
+# Time:                 7775 | State -> FLW_COMPLETE
+# Time:                 7785 | State -> IDLE
+# Time:                 7795 | ✓ Operation completed
+# Time:                 7795 | Write-back: freg[31] = 0x40000000
+# ✗ FAIL: Expected freg[31] = 0x40000000, Got freg[31] = 0x40000000
+# 
+# === Testing FLW: from max address ===
+# Time:                 7865 | State -> FLW_ACCESS
+# Time:                 7875 | State -> FLW_WAIT_READY
+# Time:                 7895 | State -> FLW_WAIT_DATA
+# Time:                 7905 | State -> FLW_STABILIZE
+# Time:                 7915 | State -> FLW_SAMPLE
+# Time:                 7925 | State -> FLW_COMPLETE
+# Time:                 7935 | State -> IDLE
+# Time:                 7945 | ✓ Operation completed
+# Time:                 7945 | Write-back: freg[ 7] = 0x42c80000
+# ✗ FAIL: Expected freg[ 7] = 0x42c80000, Got freg[ 7] = 0x42c80000
+# 
+# === Testing FSW: near max address ===
+# Time:                 8015 | State -> FSW_ACCESS
+# Time:                 8025 | State -> FSW_WAIT_READY
+# Time:                 8045 | State -> FSW_COMPLETE
+# Time:                 8055 | State -> IDLE
+# Time:                 8065 | ✓ Operation completed
+# ✓ PASS: Memory[0x00003ff8] = 0x42c80000
+# 
+# === Testing FADD: (precision test) ===
+# FADD: 0x3f800000 + 0x33800000 -> freg[ 8]
+# Time:                 8155 | State -> FADD_START
+# Time:                 8165 | State -> FADD_WAIT
+# Time:                 8205 | State -> FADD_COMPLETE
+# Time:                 8215 | State -> IDLE
+# Time:                 8225 | ✓ Operation completed
+# Time:                 8225 | Write-back: freg[ 8] = 0x3f800000
+# DEBUG: Comparing freg_wb_data=3f800000 with expected=3f800000, result=1
+# ✗ FAIL: Expected freg[ 8] = 0x3f800000, Got freg[ 8] = 0x3f800000
+# 
+# ========== 壓力測試 ==========
+# 
+# --- 快速連續 FLW 操作 ---
+# 
+# === Testing FLW:       Fast FLW 1 ===
+# Time:                 8315 | State -> FLW_ACCESS
+# Time:                 8325 | State -> FLW_WAIT_READY
+# Time:                 8345 | State -> FLW_WAIT_DATA
+# Time:                 8355 | State -> FLW_STABILIZE
+# Time:                 8365 | State -> FLW_SAMPLE
+# Time:                 8375 | State -> FLW_COMPLETE
+# Time:                 8385 | State -> IDLE
+# Time:                 8395 | ✓ Operation completed
+# Time:                 8395 | Write-back: freg[10] = 0x3f800000
+# ✗ FAIL: Expected freg[10] = 0x3f800000, Got freg[10] = 0x3f800000
+# 
+# === Testing FLW:       Fast FLW 2 ===
+# Time:                 8435 | State -> FLW_ACCESS
+# Time:                 8445 | State -> FLW_WAIT_READY
+# Time:                 8465 | State -> FLW_WAIT_DATA
+# Time:                 8475 | State -> FLW_STABILIZE
+# Time:                 8485 | State -> FLW_SAMPLE
+# Time:                 8495 | State -> FLW_COMPLETE
+# Time:                 8505 | State -> IDLE
+# Time:                 8515 | ✓ Operation completed
+# Time:                 8515 | Write-back: freg[11] = 0x40000000
+# ✗ FAIL: Expected freg[11] = 0x40000000, Got freg[11] = 0x40000000
+# 
+# === Testing FLW:       Fast FLW 3 ===
+# Time:                 8555 | State -> FLW_ACCESS
+# Time:                 8565 | State -> FLW_WAIT_READY
+# Time:                 8585 | State -> FLW_WAIT_DATA
+# Time:                 8595 | State -> FLW_STABILIZE
+# Time:                 8605 | State -> FLW_SAMPLE
+# Time:                 8615 | State -> FLW_COMPLETE
+# Time:                 8625 | State -> IDLE
+# Time:                 8635 | ✓ Operation completed
+# Time:                 8635 | Write-back: freg[12] = 0x40400000
+# ✗ FAIL: Expected freg[12] = 0x40400000, Got freg[12] = 0x40400000
+# 
+# --- 快速連續 FADD 操作 ---
+# 
+# === Testing FADD:      Fast FADD 1 ===
+# FADD: 0x3f800000 + 0x3f800000 -> freg[13]
+# Time:                 8725 | State -> FADD_START
+# Time:                 8735 | State -> FADD_WAIT
+# Time:                 8775 | State -> FADD_COMPLETE
+# Time:                 8785 | State -> IDLE
+# Time:                 8795 | ✓ Operation completed
+# Time:                 8795 | Write-back: freg[13] = 0x40000000
+# DEBUG: Comparing freg_wb_data=40000000 with expected=40000000, result=1
+# ✗ FAIL: Expected freg[13] = 0x40000000, Got freg[13] = 0x40000000
+# 
+# === Testing FADD:      Fast FADD 2 ===
+# FADD: 0x40000000 + 0x3f800000 -> freg[14]
+# Time:                 8835 | State -> FADD_START
+# Time:                 8845 | State -> FADD_WAIT
+# Time:                 8885 | State -> FADD_COMPLETE
+# Time:                 8895 | State -> IDLE
+# Time:                 8905 | ✓ Operation completed
+# Time:                 8905 | Write-back: freg[14] = 0x40400000
+# DEBUG: Comparing freg_wb_data=40400000 with expected=40400000, result=1
+# ✗ FAIL: Expected freg[14] = 0x40400000, Got freg[14] = 0x40400000
+# 
+# === Testing FADD:      Fast FADD 3 ===
+# FADD: 0x40400000 + 0x3f800000 -> freg[15]
+# Time:                 8945 | State -> FADD_START
+# Time:                 8955 | State -> FADD_WAIT
+# Time:                 8995 | State -> FADD_COMPLETE
+# Time:                 9005 | State -> IDLE
+# Time:                 9015 | ✓ Operation completed
+# Time:                 9015 | Write-back: freg[15] = 0x40800000
+# DEBUG: Comparing freg_wb_data=40800000 with expected=40800000, result=1
+# ✗ FAIL: Expected freg[15] = 0x40800000, Got freg[15] = 0x40800000
+# 
+# ========== 測試結果統計 ==========
+# 總測試數:          59
+# 通過:          12
+# 失敗:          47
+# ⚠️  有          47 個測試失敗
+# 
+# === 測試完成 ===
+# ** Note: $finish    : C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv(493)
+#    Time: 9245 ps  Iteration: 0  Instance: /fpu_tb
+# 1
+# Break in Module fpu_tb at C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv line 493
+# End time: 17:38:29 on Oct 06,2025, Elapsed time: 0:02:55
+# Errors: 1, Warnings: 0

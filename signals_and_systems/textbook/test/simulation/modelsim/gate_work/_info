@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/simulation/modelsim
+vfpu
+!s110 1759743276
+!i10b 1
+!s100 W@o7=_>LRTUl1mD;XT4Vd0
+IF=FJ]9CVzGj>WZK_ShlcN3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1759743186
+8test.vo
+Ftest.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1759743276.000000
+!s107 test.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|test.vo|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z3 tCvgOpt 0
+vfpu_tb
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1759743277
+!i10b 1
+!s100 JD16L]mbAVm9f^<Q31mle2
+I1<9>WIWzfL4J`i;9mV9:R0
+R1
+!s105 fpu_tb_sv_unit
+S1
+R0
+w1759741764
+8C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv
+FC:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1759743277.000000
+!s107 C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test|C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test/fpu_tb.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/Administrator/Desktop/mcuee_2025_1/signals_and_systems/textbook/test
+R3
